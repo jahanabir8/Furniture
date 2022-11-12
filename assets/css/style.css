@@ -863,70 +863,78 @@ a.banner__btn.tab__btn {
         }
     }
 }
-/* =====service section start here===== */
+/* =====service section end here===== */
 
-  .wrapper {
-    max-width: 50rem;
+
+/* =====popular product section start here===== */
+.tab__navigation {
     width: 100%;
-    margin: 0 auto;
-  }
-  .tabs {
-    position: relative;
-    margin: 3rem 0;
-    background: #1abc9c;
-    height: 14.75rem;
-  }
-  .tabs::before,
-  .tabs::after {
-    content: "";
-    display: table;
-  }
-  .tabs::after {
-    clear: both;
-  }
-  .tab {
-    float: left;
-  }
-  .tab-switch {
-    display: none;
-  }
-  .tab-label {
-    position: relative;
-    display: block;
-    line-height: 2.75em;
-    height: 3em;
-    padding: 0 1.618em;
-    background: #1abc9c;
-    border-right: 0.125rem solid #16a0a0;
-    color: #fff;
-    cursor: pointer;
-    top: 0;
-    transition: all 0.25s;
-  }
+    max-width: 737px;
+    margin: auto;
+    border: none;
+}
 
-  .tab-content {
-    height: 12rem;
+.tabNab__btn {
+    width: 172px;
+    border: 2px solid rgba(0, 0, 0, 0.5) !important;
+    border-radius: 10px !important;
+    color: rgba(0, 0, 0, 0.5) !important;
+    font-size: 24px;
+}
+
+.tabNab__btn.active {
+    color: #000 !important;
+    border: 2px solid #000 !important;
+}
+
+.tab__body {
+    border: none !important;
+    background: unset !important;
+}
+
+.product__card{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding-top: 18px;
+    border-radius: 20px;
+    background: #F9FAFE;
+    height: 360px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.product__card .pImg img {
+    margin: 0px auto 24px;
+    display: block;
+}
+
+.product__card h4 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.product__card p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.pContent{
     position: absolute;
-    z-index: 1;
-    top: 2.75em;
-    left: 0;
-    padding: 1.618rem;
-    background: #fff;
-    color: #2c3e50;
-    opacity: 0;
-    transition: all 0.35s;
-  }
-  .tab-switch:checked + .tab-label {
-    background: #fff;
-    color: #2c3e50;
-    border-bottom: 0;
-    border-right: 0.125rem solid #fff;
-    transition: all 0.35s;
-    z-index: 1;
-    top: -0.0625rem;
-  }
-  .tab-switch:checked + label + .tab-content {
-    z-index: 2;
-    opacity: 1;
-    transition: all 0.35s;
-  }
+    left: 36px;
+    right: 36px;
+    bottom: 26px;
+}
+
+.card__foot p {
+    font-size: 26px;
+}
+
+@media screen and (max-width: 1440px) {
+    .pContent {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 26px;
+    }
+}
+/* =====popular product section start here===== */
