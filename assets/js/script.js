@@ -41,3 +41,54 @@ $(".burger__menu").click(function(){
     });
     
   });
+
+  // review slider
+  var swiper = new Swiper(".reviewSwiper", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    // loop: true,
+    // autoplay: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
+    // breakpoints: {
+    //   "@0.00": {
+    //     slidesPerView: 1,
+    //     spaceBetween: 10,
+    //   },
+    //   "@0.75": {
+    //     slidesPerView: 2,
+    //     spaceBetween: 20,
+    //   },
+    //   "@1.00": {
+    //     slidesPerView: 3,
+    //     spaceBetween: 40,
+    //   },
+    //   "@1.50": {
+    //     slidesPerView: 4,
+    //     spaceBetween: 50,
+    //   },
+    // },
+  });
+
+
+
+
+
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+})
