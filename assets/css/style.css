@@ -1040,27 +1040,101 @@ a.banner__btn.tab__btn {
 
 }
 
-.review__content .content__image img {
-    width: 86px !important;
-    height: 86px;
-    margin: auto;
-    border: 2px solid red;
-    border-radius: 50%;
-}
-
-.review__content .reviews img {
-    width: 20px !important;
-}
-
-.owl-nav{
-    display: none;
-}
-
 .review__content {
     bottom: 25px;
     left: 24px;
     right: 24px;
     background: #ffffffb8;
     border-radius: 20px;
+}
+
+.review__content .content__image .image__border{
+    width: 116px !important;
+    height: 116px;
+    margin: auto;
+    background-color: #ffffffb8;
+    border-radius: 50%;
+}
+
+.review__content .content__image .image__border img{
+    width: 100% !important;
+    padding: 18px;
+}
+
+.review__content .content__image {
+    position: relative;
+    margin-bottom: 49px;
+}
+
+.review__content .content__image .image__border {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+.review__content .reviews img {
+    width: 20px !important;
+}
+
+.review__content span {
+    display: block;
+    font-size: 14px;
+    line-height: 26px;
+    color: #373737;
+    margin: 6px 0 27px;
+}
+
+.review__content p {
+    max-width: 100%;
+    width: 375px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000;
+}
+
+.review__content .reviews {
+    width: 100%;
+    max-width: 143px;
+    margin: 56px auto 36px;
+}
+
+
+
+
+.owl-carousel.owl-theme.owl-loaded.owl-drag{
+    padding-top: 50px;
+}
+
+.owl-nav{
+    display: none;
+}
+
+.owl-dots{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+    width: 21px;
+    transition: 0.2s ease-in-out;
+}
+
+.owl-dots button.owl-dot.active span {
+    width: 57px;
+    transition: 0.2s ease-in-out;
+    transform-origin: left;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: #F16240;
 }
 /* =====review section css start here====  */
