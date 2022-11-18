@@ -84,7 +84,7 @@ $(".burger__menu").click(function(){
         0:{
             items:1
         },
-        600:{
+        768:{
             items:2
         },
         1000:{

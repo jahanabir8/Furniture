@@ -48,6 +48,28 @@ img.cmIMG{
 }
 
 
+
+
+
+.animate__animated.animate__bounce {
+    --animate-duration: 2s;
+  }
+   
+  /* This changes all the animations globally */
+  :root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
+
+.my-element {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: bounce; 
+    animation-duration: 2s; 
+  }
+
+
 :root{
     --bg--color: #FDF2ED;
     --p--color: #000000;
@@ -117,7 +139,6 @@ img.cmIMG{
     width: 50%;
     padding: 48px 36px 48px 48px;
     background: var(--p--white);
-    /* display: none; */
     transition: .5s ease-in-out;
 }
 
@@ -149,18 +170,22 @@ img.cmIMG{
     font-weight: bold;
 }
 
+@media screen and (max-width: 575px) {
+    .mobile__menu{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .mobile__menu{
+        width: 100%;
+    }
+}
+
 
 
 
 /* ====================== */
-
-.banner__section{
-    /* display: none; */
-}
-
-/* .banner__content{
-    padding: 140px 0;
-} */
 
 .banner__content h1{
     font-size: 74px;
@@ -188,7 +213,6 @@ img.cmIMG{
     color: var(--p--white);
     border-radius: 10px;
     margin-right: 38px;
-    /* display: inline-block; */
 }
 
 .banner__button button.banner__btn{
@@ -388,12 +412,15 @@ img.cmIMG{
         margin-top: 20px;
     }
 
-}
-
-@media screen and (max-width: 374px) {
-    .banner__content h2{
-        font-size: 32px;
+    .banner__content h1 {
+        font-size: 33px;
+        line-height: 54px;
     }
+
+    .banner__content h2{
+        font-size: 35px;
+    }
+
 }
 
 
@@ -436,8 +463,6 @@ img.cmIMG{
     display: flex;
     flex-direction: column;
 }
-
-
 
 
 /* ==========tab */
@@ -488,7 +513,6 @@ img.cmIMG{
     width:100%;
     max-width: 434px;
     height:100%; 
-    /* margin:0 auto; */
     overflow:hidden;
     text-align:center;
     position:relative;
@@ -564,10 +588,6 @@ nav.tab__nav {
 .banner__content.product__content p {
     margin: 22px 0 57px;
 }
-/* 
-.banner__content.product__content {
-    padding-left: 78px;
-} */
 
 a.banner__btn.tab__btn {
     margin-right: 0;
@@ -693,7 +713,7 @@ a.banner__btn.tab__btn {
 @media screen and (max-width: 991px) {
     .arrival__content__title h2{
         margin-bottom: 28px;
-        font-size: 36px;
+        font-size: 35px;
         line-height: 48px;
     }
 
@@ -703,7 +723,7 @@ a.banner__btn.tab__btn {
 
     .content__para .para h4 {
         margin-bottom: 10px;
-        font-size: 26px;
+        font-size: 25px;
     }
 }
 
@@ -776,7 +796,7 @@ a.banner__btn.tab__btn {
     }
 
     .service__title h2 {
-        font-size: 32px;
+        font-size: 35px;
         line-height: 40px;
     }
 
@@ -886,6 +906,13 @@ a.banner__btn.tab__btn {
         font-size: 22px;
     }
 }
+
+@media screen and (max-width: 424px) {
+    .product__title h2{
+        font-size: 35px;
+        line-height: 48px;
+    }
+}
 /* =====popular product section start here===== */
 
 
@@ -992,6 +1019,10 @@ a.banner__btn.tab__btn {
 }
 
 @media screen and (max-width: 767px) {
+    .discount__section{
+        margin: 50px 0 70px;
+    }
+
     .discount__content h2{
         font-size: 31px;
         text-align: center;
@@ -1080,15 +1111,15 @@ a.banner__btn.tab__btn {
 
 .review__content span {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 26px;
     color: #373737;
     margin: 6px 0 27px;
 }
 
 .review__content p {
-    max-width: 100%;
-    width: 375px;
+    width: 100%;
+    max-width: 375px;
     margin: auto;
     font-size: 18px;
     line-height: 28px;
@@ -1120,7 +1151,7 @@ a.banner__btn.tab__btn {
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: space-between;
-    width: 110px;
+    width: 111px;
 }
 
 .owl-theme .owl-dots .owl-dot span{
@@ -1134,7 +1165,133 @@ a.banner__btn.tab__btn {
     transform-origin: left;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+.owl-theme .owl-dots .owl-dot.active span,
+ .owl-theme .owl-dots .owl-dot:hover span{
     background: #F16240;
 }
+
+.review__section {
+    padding: 48px 0 122px;
+    background: #F3F6FF;
+}
+
+@media screen and (max-width: 575px) {
+    .review__content .content__image{
+        margin-bottom: 60px;
+    }
+
+    .review__inner h2{
+        margin-bottom: 35px;
+        line-height: 56px;
+    }
+
+    .owl-carousel.owl-theme.owl-loaded.owl-drag{
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .review__content{
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .review__content{
+        left: 13px;
+        right: 13px;
+        bottom: 13px;
+    }
+}
 /* =====review section css start here====  */
+
+
+/* =====footer section css start here===== */
+
+.social__link .icon{
+    color: #FF6A28;
+    border: 1px solid #FF6A28;
+    border-radius: 50%;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+}
+.social__link .icon:hover{
+    color: white;
+    background-color: #FF6A28;
+}
+
+.footer__border{
+    margin: 10px 0;
+}
+.copy{
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+}
+
+
+/* =====footer section css end here===== */
+
+
+/* ===== */
+.foot__sec1 h2 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 76px;
+}
+
+
+.foot__sec2 a,
+ .foot__sec3 a,
+  .foot__sec4 a {
+    color: rgba(0, 0, 0, 0.618);
+}
+
+@media screen and (max-width: 575px) {
+    .foot__sec1 h2{
+        font-size: 35px;
+        line-height: 48px;
+    }
+
+
+}
+/* ===== */
+
+
+
+
+/* .hello p{
+    width: 100px;
+    height: 6px;
+    background: red;
+    position: relative;
+}
+
+.hello p span{
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.hello p span:first-child{
+    left: -3px;
+    top: -3px;
+}
+
+.hello p span:nth-child(2){
+    left: -3px;
+    bottom: -3px;
+}
+
+.hello p span:nth-child(3){
+    right: -3px;
+    bottom: -3px;
+}
+
+.hello p span:nth-child(4){
+    right: -3px;
+    top: -3px;
+} */
